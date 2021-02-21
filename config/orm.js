@@ -36,6 +36,9 @@ const objToSql = (ob) => {
 };
 
 // Object for all our SQL statement functions.
+//   * selectAll()  ?? all(cb)   ??
+//  * insertOne()  ?? create(cb)  ??
+//  * updateOne()  ?? update(cb)  ??
 const orm = {
   all(tableInput, cb) {
     const queryString = `SELECT * FROM ${tableInput};`;
@@ -99,5 +102,5 @@ const orm = {
   },
 };
 
-// Export the orm object for the model (burgers.js).
+// Export the orm object for the model (burger.js).
 module.exports = orm;
