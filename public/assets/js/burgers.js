@@ -43,14 +43,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
   }
 
   // CREATE
-  const createCatBtn = document.getElementById("create-form");
+  const createBurgerBtn = document.getElementById("create-form");
 
-  if (createCatBtn) {
-    createCatBtn.addEventListener("submit", (e) => {
+  if (createBurgerBtn) {
+    createBurgerBtn.addEventListener("submit", (e) => {
       e.preventDefault();
 
       // Grabs the value of the textarea that goes by the name, "quote"
-      const newCat = {
+      const newBurger = {
         burger_name: document.getElementById("ca").value.trim(),
         devoured: document.getElementById("sleepy").checked,
       };
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         },
 
         // make sure to serialize the JSON body
-        body: JSON.stringify(newCat),
+        body: JSON.stringify(newBurger),
       }).then(() => {
         // Empty the form
         document.getElementById("ca").value = "";
@@ -77,10 +77,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
   }
 
   // DELETE
-  const deleteCatBtns = document.querySelectorAll(".delete-cat");
+  const deleteBurgerBtns = document.querySelectorAll(".delete-burger");
 
   // Set up the event listeners for each delete button
-  deleteCatBtns.forEach((button) => {
+  deleteBurgerBtns.forEach((button) => {
     button.addEventListener("click", (e) => {
       const id = e.target.getAttribute("data-id");
 
